@@ -1,0 +1,19 @@
+@use "../../styles/variables" as *
+@use "../../styles/mixins" as *
+
+.title-container
+    @include flex-center
+    flex-direction: column
+
+    .title
+        font-family: $primary-font
+        font-weight: 200
+        color: $primary-400
+        font-size: clamp($font-big, 5vw, $font-big + 1rem)
+        text-align: center
+
+    .underline
+        margin-top: 2rem
+        width: clamp(7rem, 10vw, 10rem)
+        height: 0.1rem
+        background-color: $primary-400

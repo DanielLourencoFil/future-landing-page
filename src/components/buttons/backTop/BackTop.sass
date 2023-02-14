@@ -1,0 +1,21 @@
+@use "../../../styles/variables" as *
+@use "../../../styles/mixins" as *
+
+.backTop-btn
+    position: absolute
+    top: 0
+    right: 3rem
+    transform: translateY(-50%)
+    background-color: $primary-500
+    border: none
+    width: 5rem
+    height: 5rem
+    border-radius: 50%
+    .arrow-up-icon
+        position: relative
+        font-size: $font-big - .3rem
+        color: $light-200
+        transition: .5s linear !important
+
+    &:hover .arrow-up-icon
+        top: -.4rem

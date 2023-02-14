@@ -1,0 +1,22 @@
+@use "../../styles/variables" as *
+@use "../../styles/mixins" as *
+
+.footer-main-container
+    @include flex-center
+    position: relative
+    background-color: $primary-500
+    min-height: 25vh
+    .footer
+
+    .text
+        color: $light-200
+        margin-bottom: 1rem
+        font-size: $font-small +.2rem
+        &:last-child
+            margin-left: 1.5rem
+
+@media (min-width:$tablet)
+    .footer
+        @include flex-center
+        justify-content: space-between
+        font-size: $font-regular

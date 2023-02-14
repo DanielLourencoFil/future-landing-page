@@ -1,0 +1,22 @@
+@use "../../styles/variables" as *
+@use "../../styles/mixins" as *
+
+.social-media
+    @include flex-center
+    display: none
+    gap: 0.5rem
+    z-index: 1
+    position: absolute
+    top: 2rem
+    right: 4rem
+
+.social-icon
+    font-size: $font-medium + .75rem
+    color: $light-100
+
+    &:hover
+        color: $primary-200
+
+@media (min-width: $tablet)
+    .social-media
+        display: flex

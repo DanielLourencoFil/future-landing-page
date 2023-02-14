@@ -1,0 +1,46 @@
+@use "../../../styles/variables" as *
+@use "../../../styles/mixins" as *
+
+.work-card
+    position: relative
+    max-width: 80vw
+    background-color: $light-100
+    transition: .4s
+    height: 100%
+
+    &:hover
+        box-shadow: $box-shadow-01
+
+    .info-container
+        position: relative
+        font-family: $primary-font
+        color: $primary-300
+        padding: 2.5rem
+        .title
+            text-transform: uppercase
+            font-size: $font-regular + .1rem
+            font-weight: 200
+            margin-bottom: .5rem
+        .desc
+            font-size: $font-regular-small
+            font-weight: 200
+        .search
+            position: absolute
+            top: 0
+            right: 2rem
+            transform: translateY(-50%)
+            @include flex-center
+            width: 4rem
+            height: 4rem
+            border-radius: 50%
+            background-color: $light-100
+            z-index: 1
+            transition: .4s
+            &:hover
+                background-color: $primary-100b
+
+            svg
+                font-size: $font-regular
+                color: $primary-300b
+
+    .search-icon

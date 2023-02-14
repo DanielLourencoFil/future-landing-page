@@ -1,0 +1,28 @@
+@use "../../styles/variables" as *
+@use "../../styles/mixins" as *
+
+.countdown
+    @include flex-center
+    flex-wrap: wrap
+    z-index: 1
+    gap: .75rem
+
+.counter
+    @include flex-center
+    flex-direction: column
+    gap: 1rem
+    width: clamp(7rem,12vw ,12rem)
+    height: clamp(6rem,12vw ,11rem)
+    background-color: $bg-light-200
+    border-radius: $br-100
+
+.number
+    font-family: $secondary-font
+    color: $light-100
+    font-size: clamp($font-medium + .5rem, 4vw, $font-medium + 2rem)
+
+.text
+    font-family: $secondary-font
+    color: $light-100
+    font-size: clamp($font-small, 1vw, $font-small + .5rem)
+    text-transform: uppercase

@@ -1,0 +1,55 @@
+@use "../../../styles/variables" as *
+@use "../../../styles/mixins" as *
+
+.card
+    @include flex-center
+    flex-direction: column
+    position: relative
+    border: $border-100
+    width: 80%
+    background-color: $light-100
+    padding: 2.5rem 4rem
+    padding-top: 5rem
+    gap: 2rem
+
+    .icon-container
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translate(-50%,-50%) rotate(45deg)
+        display: grid
+        place-items: center
+        border: $border-100
+        width: 7rem
+        height: 7rem
+        background-color: $light-100
+        z-index: 1
+        transition: .4s
+        &:hover
+            background-color: $primary-400
+        &:hover svg
+            color: $light-100
+
+        svg
+            transform: rotate(-45deg)
+            font-size: $font-medium
+            color: $bg-light-500
+            transition: .4s
+    .title
+        font-size: $font-regular + .75rem
+        color: $primary-400
+        text-transform: uppercase
+        text-align: center
+        margin-top: 3rem
+    .desc
+        font-family: $secondary-font
+        font-size: $font-regular-small
+        color: $primary-300b
+        text-align: center
+        line-height: 1.5
+
+    .btn
+        @include btn-01
+        font-size: $font-regular-small
+        margin-top: 1rem
+        background-color: transparent

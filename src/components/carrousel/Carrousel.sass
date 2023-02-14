@@ -1,0 +1,100 @@
+@use "./../../styles/variables" as *
+@use "./../../styles/mixins" as *
+
+.carrousel-main-container
+    position: fixed
+    @include flex-center
+    top: -100%
+    left: 0
+    opacity: 0
+    z-index: -9
+    min-height: 100%
+    transition: .6s
+
+.carrousel
+    position: relative
+    overflow: hidden
+    max-height: 80vh
+    width: 80%
+    max-width: 900px
+    &:hover .slide-btn
+        opacity: 1
+.carrousel-img
+    height: 85%
+    width: 100%
+    object-fit: cover
+    object-position: center
+
+.close-btn
+    position: absolute
+    top: 0
+    right: 0
+    width: 3.5rem
+    height: 3.5rem
+    border: transparent
+    background-color: $light-100
+    font-size: $font-medium
+    line-height: $br-100
+    color: $primary-200
+
+.slide-btn
+    position: absolute
+    width: clamp(7rem, 12.5vw, 14rem)
+    height: clamp(7rem, 12.5vw, 14rem)
+    top: 50%
+    border-radius: 2rem
+    border: transparent
+    background-color: $primary-300
+    color: $light-100
+    font-size: clamp($font-medium, 3vw, $font-medium + 2rem)
+    font-weight: 200
+    z-index: 2
+    opacity: 0
+    &.left
+        left: 0
+        transform: rotate(45deg) translate(-75%, 5%)
+        svg
+            position: relative
+            transform: rotate(-45deg)
+            bottom: 1.25rem
+            left: 1.75rem
+    &.right
+        right: 0
+        transform: rotate(-45deg) translate(75%, 5%)
+        svg
+            position: relative
+            transform: rotate(45deg)
+            bottom: 1.25rem
+            right: 1.75rem
+
+.desc-carrousel
+    position: absolute
+    bottom: 0
+    width: 100%
+    @include flex-center
+    height: 5rem
+    background-color: $bg-light-200b
+    color: $primary-500
+    font-weight: 200
+    font-size: clamp($font-small - .3rem, 1vw, $font-small )
+
+.show-carrousel
+    top: 0
+    opacity: 1
+    background-color: $bg-light-300
+    z-index: 9
+
+@media (min-width: $tablet)
+    .slide-btn
+        &.left
+            svg
+                bottom: 2.5rem
+                left: 3rem
+        &.right
+            svg
+                bottom: 2.5rem
+                right: 3rem
+    .close-btn
+        font-size: $font-medium + .5rem
+        width: 5rem
+        height: 5rem

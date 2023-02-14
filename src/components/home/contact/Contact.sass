@@ -1,0 +1,75 @@
+@use "../../../styles/variables" as *
+@use "../../../styles/mixins" as *
+
+.contact
+    @include flex-center
+    flex-direction: column
+    padding: 7rem 0
+    gap: 3rem
+    .desc-section
+        width: 80%
+        max-width: 50rem
+        color: $primary-300b
+        text-align: center
+        line-height: 1.5
+        font-size: clamp($font-small - .25rem, 2.53vw, $font-medium)
+        font-family: $secondary-font
+    .contact-form
+        @include flex-center
+        flex-direction: column
+        width: 100%
+        gap: 1.5rem
+    .form-input, .textArea-input
+        width: 100%
+        border: none
+        background-color: $primary-100
+        border-radius: $br-300
+        padding: 1.4rem 2.5rem
+        font-size: $font-regular
+        color: $primary-300
+        outline-width: 1px
+        &:focus
+            outline-color: rgba(0,0,0,.05)
+    .contact-btn
+        position: relative
+        border-radius: $br-300
+        border: $border-100
+        border-color: $primary-500
+        font-size: $font-regular
+        padding: 1.35rem 3.5rem
+        background-color: transparent
+        margin-top: 2rem
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+            opacity: 0
+            border-radius: $br-300
+            width: 25%
+            height: 100%
+            background-color: $primary-500
+            transition: .2s
+            z-index: -1
+        &:hover
+            background-color: $bg-light-500
+            color: $light-100
+        &:hover::before
+            width: 100%
+            opacity: 1
+            border-radius: $br-300
+        &:disabled
+            cursor: not-allowed
+        &:disabled::before
+            content: ""
+            opacity: 0
+    .contact-message
+        font-size: $font-regular
+        color: $primary-500
+        padding: 1rem
+        width: 100%
+        border-radius: $br-300
+        text-align: center
+        background-color: #bdf6b5
+        transition: .5s
