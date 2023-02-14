@@ -11,6 +11,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Visit my portfolio and see the project live
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can visit the live page [Future - Landing Page](https://future-landing-page.vercel.app/).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To learn more about it in GitHub page, check out the [The project code](https://github.com/DanielLourencoFil/future-landing-page).
