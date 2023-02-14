@@ -1,6 +1,6 @@
-import { useForm, ValidationError } from "@formspree/react";
+import { useForm } from "@formspree/react";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Title } from "../../";
 import "./Contact.sass";
 
