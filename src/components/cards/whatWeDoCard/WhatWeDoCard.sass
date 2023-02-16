@@ -11,7 +11,10 @@
     padding: 2.5rem 4rem
     padding-top: 5rem
     gap: 2rem
-
+    &:hover .icon-container
+        background-color: $primary-400
+    &:hover .icon-container svg
+        color: $light-100
     .icon-container
         position: absolute
         top: 0
@@ -25,10 +28,6 @@
         background-color: $light-100
         z-index: 1
         transition: .4s
-        &:hover
-            background-color: $primary-400
-        &:hover svg
-            color: $light-100
 
         svg
             transform: rotate(-45deg)
