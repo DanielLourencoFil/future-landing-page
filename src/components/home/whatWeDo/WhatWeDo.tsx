@@ -71,7 +71,7 @@ const whatWeDoInfo: WhatProps[] = [
 
 export const WhatWeDo = () => {
 	return (
-		<div className="main-container">
+		<div className="main-container" id="what-section">
 			<section className="whatWeDo center">
 				<Title text={"What We Do"} />
 				<p className="desc-section">
